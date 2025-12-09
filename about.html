@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Enhanced About Page Styles */
+        .hero-profile { text-align: center; padding: 3rem 0; }
+        .profile-card { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            border-radius: 20px; 
+            padding: 3rem; 
+            max-width: 700px; 
+            margin: 0 auto; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex; 
+            align-items: center; 
+            gap: 2rem;
+        }
+        .profile-img { max-width: 200px; border-radius: 50%; border: 5px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .profile-info h1 { color: white; font-size: 2.5rem; margin: 0; }
+        .profile-info h2 { color: #f0f0f0; margin: 0.5rem 0; font-size: 1.3rem; }
+        .tagline { color: #ffd700; font-size: 1.2rem; font-weight: bold; }
+
+        /* Timeline */
+        .timeline { max-width: 900px; margin: 4rem auto; position: relative; padding: 2rem 0; }
+        .timeline::before { content: ''; position: absolute; left: 50%; width: 4px; height: 100%; background: linear-gradient(to bottom, #3498db, #2ecc71); transform: translateX(-50%); }
+        .timeline h2 { text-align: center; color: #2c3e50; margin-bottom: 3rem; font-size: 2.5rem; }
+        .timeline-item { display: flex; margin: 3rem 0; position: relative; }
+        .timeline-item:nth-child(odd) { justify-content: flex-end; padding-left: 0; padding-right: 4rem; }
+        .timeline-item:nth-child(even) { justify-content: flex-start; padding-right: 0; padding-left: 4rem; }
+        .timeline-dot { width: 20px; height: 20px; background: #3498db; border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%); z-index: 1; box-shadow: 0 0 0 4px white; }
+        .timeline-content { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); width: 45%; position: relative; }
+        .timeline-item:nth-child(odd) .timeline-content { margin-right: 50%; text-align: right; }
+        .timeline-item:nth-child(even) .timeline-content { margin-left: 50%; }
+        .timeline-content h3 { color: #2c3e50; margin-bottom: 0.5rem; font-size: 1.3rem; }
+        .timeline-content p { color: #7f8c8d; line-height: 1.7; }
+
+        /* Skills Progress */
+        .skills-progress { max-width: 700px; margin: 4rem auto; padding: 2rem; }
+        .skills-progress h2 { text-align: center; color: #2c3e50; margin-bottom: 3rem; font-size: 2.5rem; }
+        .progress-item { margin: 2rem 0; }
+        .progress-item span { display: block; margin-bottom: 0.8rem; font-weight: bold; font-size: 1.1rem; color: #2c3e50; }
+        .progress-bar { background: #ecf0f1; height: 25px; border-radius: 15px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #3498db, #2ecc71); border-radius: 15px; transition: width 2s ease-in-out; box-shadow: 0 0 20px rgba(52,152,219,0.5); }
+
+        /* Story Cards */
+        .personal-story { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
+        .personal-story h2 { text-align: center; color: #2c3e50; margin-bottom: 3rem; font-size: 2.5rem; }
+        .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .story-card { 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+            padding: 2.5rem 2rem; 
+            border-radius: 20px; 
+            text-align: center; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .story-card:hover { transform: translateY(-15px); box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+        .story-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Shiva Vashisht🩶</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Profile Section -->
+        <section class="hero-profile">
+            <div class="profile-card">
+                
+                <div class="profile-info">
+                    <h1>Shivaaa❤️‍🔥</h1>
+                    <h2>BTech Computer Science | KIET Ghaziabad</h2>
+                    <p class="tagline">Turning Code into Solutions 🚀</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Timeline - 20+ lines -->
+        <section class="timeline">
+            <h2>My Journey</h2>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2022 - Class 10th CBSE</h3>
+                    <p>Scored 95%+ with distinction in Computer Science. First exposure to programming concepts.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2023 - BTech KIET</h3>
+                    <p>Started Computer Science journey at KIET Ghaziabad. First C programming semester.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2024 - Coding Mastery</h3>
+                    <p>Mastered C programming, DSA basics. Solved 100+ LeetCode problems. College rank holder.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2025 - Web & IoT</h3>
+                    <p>Building responsive websites & ESP8266 IoT projects. UP Scholarship recipient.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Progress Bars - 10+ lines -->
+        <section class="skills-progress">
+            <h2>Technical Proficiency</h2>
+            <div class="progress-item">
+                <span>C Programming</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+            </div>
+            <div class="progress-item">
+                <span>HTML/CSS (Flexbox)</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+            </div>
+            <div class="progress-item">
+                <span>Data Structures</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+            </div>
+            <div class="progress-item">
+                <span>Git/GitHub</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+            </div>
+            <div class="progress-item">
+                <span>IoT (ESP8266)</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 65%"></div></div>
+            </div>
+        </section>
+
+        <!-- Personal Story - 30+ lines -->
+        <section class="personal-story">
+            <h2>Why I Code</h2>
+            <div class="story-grid">
+                <div class="story-card">
+                    <h3>🎯 Problem Solver</h3>
+                    <p>From debugging family laptop issues to solving complex LeetCode problems, coding is my way of making technology work for people.</p>
+                </div>
+                <div class="story-card">
+                    <h3>📚 Lifelong Learner</h3>
+                    <p>Daily LeetCode + CodeTantra practice. YouTube tutorials from CodeWithHarry, Apna College. Learning never stops!</p>
+                </div>
+                <div class="story-card">
+                    <h3>💻 Daily Routine</h3>
+                    <p>6 AM coding, college lectures, evening DSA, weekend IoT projects. 8.5+ CGPA maintained consistently.</p>
+                </div>
+                <div class="story-card">
+                    <h3>🚀 Future Goals</h3>
+                    <p>Google/Microsoft internship 2026 → Full Stack Developer → Tech Lead. Sky's the limit!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Projects - Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Enhanced Skills Page Styles */
+        .skills-hero { 
+            text-align: center; 
+            padding: 4rem 2rem; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            margin-bottom: 4rem;
+        }
+        .skills-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .skills-hero p { font-size: 1.3rem; max-width: 600px; margin: 0 auto; }
+
+        /* Skills Categories */
+        .skills-categories { max-width: 1200px; margin: 0 auto 4rem; padding: 0 2rem; }
+        .category-section { margin-bottom: 4rem; }
+        .category-title { 
+            text-align: center; 
+            font-size: 2.5rem; 
+            color: #2c3e50; 
+            margin-bottom: 3rem; 
+            position: relative;
+        }
+        .category-title::after { 
+            content: ''; 
+            display: block; 
+            width: 100px; 
+            height: 4px; 
+            background: linear-gradient(90deg, #3498db, #2ecc71); 
+            margin: 1rem auto; 
+        }
+
+        /* Programming Skills Grid */
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 2rem; 
+        }
+        .skill-card { 
+            background: white; 
+            padding: 2.5rem; 
+            border-radius: 20px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            text-align: center; 
+            transition: all 0.4s ease; 
+            border-top: 5px solid transparent;
+            position: relative; 
+            overflow: hidden;
+        }
+        .skill-card::before {
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            height: 5px; 
+            background: linear-gradient(90deg, #3498db, #2ecc71, #f39c12); 
+        }
+        .skill-card:hover { 
+            transform: translateY(-15px) scale(1.02); 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2); 
+        }
+        .skill-icon { 
+            font-size: 4rem; 
+            margin-bottom: 1.5rem; 
+            display: block;
+        }
+        .skill-card h3 { 
+            font-size: 1.8rem; 
+            color: #2c3e50; 
+            margin-bottom: 1rem; 
+        }
+        .proficiency { 
+            display: inline-block; 
+            background: linear-gradient(135deg, #667eea, #764ba2); 
+            color: white; 
+            padding: 0.5rem 1.5rem; 
+            border-radius: 25px; 
+            font-weight: bold; 
+            margin: 1rem 0; 
+        }
+
+        /* Projects Showcase */
+        .projects-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem; 
+        }
+        .project-card { 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+            padding: 2rem; 
+            border-radius: 15px; 
+            text-align: center; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            transition: all 0.3s ease;
+        }
+        .project-card:hover { transform: translateY(-10px); }
+        .project-card h3 { color: #2c3e50; margin-bottom: 1rem; }
+        .tech-stack { 
+            display: flex; 
+            justify-content: center; 
+            gap: 0.5rem; 
+            margin: 1rem 0; 
+            flex-wrap: wrap;
+        }
+        .tech-badge { 
+            background: #3498db; 
+            color: white; 
+            padding: 0.3rem 0.8rem; 
+            border-radius: 15px; 
+            font-size: 0.8rem; 
+            font-weight: bold;
+        }
+
+        /* Stats Section */
+        .stats-section { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 3rem 2rem; 
+            text-align: center; 
+        }
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 2rem; 
+            max-width: 800px; 
+            margin: 2rem auto; 
+        }
+        .stat-item h3 { font-size: 3rem; color: #3498db; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Your Name</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Skills Hero Section -->
+    <section class="skills-hero">
+        <h1>Skills & Projects</h1>
+        <p>Mastering Computer Science fundamentals with hands-on projects. 100+ problems solved across multiple platforms.</p>
+    </section>
+
+    <!-- Programming Skills -->
+    <section class="skills-categories">
+        <div class="category-section">
+            <h2 class="category-title">🖥️ Programming Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span class="skill-icon">⚙️</span>
+                    <h3>C Programming</h3>
+                    <p>Mastered pointers, structures, file handling, dynamic memory. Solved 100+ LeetCode problems.</p>
+                    <span class="proficiency">85% Proficiency</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🌐</span>
+                    <h3>Web Development</h3>
+                    <p>HTML5, CSS3, Flexbox layouts, responsive design. Built 5+ portfolio websites.</p>
+                    <span class="proficiency">75% Proficiency</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🔗</span>
+                    <h3>Data Structures</h3>
+                    <p>Arrays, Linked Lists, Stacks, Queues, Trees. Implemented sorting algorithms from scratch.</p>
+                    <span class="proficiency">70% Proficiency</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Showcase -->
+        <div class="category-section">
+            <h2 class="category-title">💻 Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Student Portfolio</h3>
+                    <p>Multi-page responsive website using HTML5, CSS3, Flexbox layouts.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">Flexbox</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Library Management</h3>
+                    <p>C program for book tracking with file handling and search functionality.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">C</span>
+                        <span class="tech-badge">File I/O</span>
+                        <span class="tech-badge">Structures</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>ESP8266 Weather Station</h3>
+                    <p>IoT project displaying temperature/humidity on web dashboard.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">ESP8266</span>
+                        <span class="tech-badge">Sensors</span>
+                        <span class="tech-badge">WiFi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">My Achievements</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>LeetCode Problems</p>
+            </div>
+            <div class="stat-item">
+                <h3>8.5+</h3>
+                <p>CGPA</p>
+            </div>
+            <div class="stat-item">
+                <h3>5+</h3>
+                <p>Projects Built</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Coding Hours/Week</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
